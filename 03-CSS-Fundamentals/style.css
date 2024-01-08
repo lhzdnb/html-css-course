@@ -1,11 +1,14 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+* {
+  /* Property applied to all elements but not get inherited */
+  /*border-top: 10px solid #1098ad;*/
+}
+
+body {
   font-family: sans-serif;
   color: #444;
+
+  /* Not inherited */
+  border-top: 10px solid #1098ad;
 }
 
 h1,
@@ -41,7 +44,6 @@ p {
 
 li {
   font-size: 20px;
-  font-family: sans-serif;
 }
 
 /* Descendant selector */
@@ -154,4 +156,9 @@ a:active {
 
 footer p {
   color: green;
+}
+
+/* Inheritance */
+nav {
+  font-size: 18px;
 }

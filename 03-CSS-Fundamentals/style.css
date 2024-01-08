@@ -90,6 +90,7 @@ body {
 */
 
 /* Pseudo Classes */
+/*  If the first child happens to be an li element, then this rule will apply to it. */
 li:first-child {
   font-weight: bold;
 }
@@ -115,5 +116,25 @@ article p:first-child {
 
 /* Select the paragraph that is actually the last child of the article */
 article p:last-child {
-  color: red;
+  /*color: red;*/
+}
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
 }

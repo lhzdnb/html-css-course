@@ -1,8 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  border: 5px black solid;
   font-family: sans-serif;
   font-size: 15px;
   line-height: 1.4;
+}
+
+.container {
+  border: 5px black solid;
+  padding: 0;
+  width: 825px;
+  margin: 50px auto;
 }
 
 .product-title {
@@ -10,6 +21,12 @@ body {
   text-align: center;
   background-color: #f7f7f7;
   text-transform: uppercase;
+  padding: 15px;
+}
+
+.shoes-img {
+  width: 30%;
+  height: auto;
 }
 
 .price {
@@ -20,33 +37,53 @@ body {
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
-a:link,
-a:visited {
+.description {
+  margin-bottom: 15px;
+}
+
+.more-info:link,
+.more-info:visited {
   color: black;
 }
 
-a:hover,
-a:active {
+.more-info:hover,
+.more-info:active {
   text-decoration: none;
 }
 
 .details-title {
   text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
-.details {
+.details-list {
   list-style: square;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.details-list li {
+  margin-bottom: 10px;
+}
+li:last-child {
+  margin-bottom: 0;
 }
 
 .add-to-cart-btn {
   background-color: black;
   color: white;
   border: none;
+  border-top: 5px solid black;
   text-transform: uppercase;
   font-size: 20px;
   cursor: pointer;
+  width: 100%;
+  height: auto;
+  padding: 15px;
 }
 
 .add-to-cart-btn:hover {

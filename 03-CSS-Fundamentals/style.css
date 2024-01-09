@@ -37,6 +37,7 @@ article {
 
 .post-header {
   margin-bottom: 40px;
+  position: relative;
 }
 
 aside {
@@ -223,6 +224,6 @@ button {
   cursor: pointer;
 
   position: absolute;
-  top: 50px;
-  left: 50px;
+  bottom: 50px;
+  right: 50px;
 }

@@ -22,6 +22,7 @@ body {
   background-color: #f7f7f7;
   text-transform: uppercase;
   padding: 15px;
+  position: relative;
 }
 
 .shoes-img {
@@ -89,4 +90,51 @@ li:last-child {
 .add-to-cart-btn:hover {
   background-color: white;
   color: black;
+}
+
+.product-title::before {
+  content: "SALE";
+  background-color: #ec2f2f;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: white;
+  position: absolute;
+  top: -17px;
+  left: -38px;
+  display: inline-block;
+  padding: 7px 15px;
+}
+
+.color {
+  margin-top: 30px;
+}
+
+.color div {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.color div:last-child {
+  margin-right: 0;
+}
+
+.black {
+  background-color: black;
+}
+.blue {
+  background-color: #2f6ee2;
+}
+.red {
+  background-color: #ec2f2f;
+}
+.yellow {
+  background-color: #f0bf1e;
+}
+.green {
+  background-color: #90cc20;
+}
+.brown {
+  background-color: #885214;
 }

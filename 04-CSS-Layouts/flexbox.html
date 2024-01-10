@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,10 +36,43 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        align-items: center; /* cross axis */
+        justify-content: flex-start; /* main axis */
+        gap: 30px; /* add gap between elements */
+      }
+
+      .el {
+        /*
+        DEFAULTS:
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        */
+
+        /*flex-basis: 200px;
+        flex-shrink: 1;  Whether to shrink elements to fit the container if necessary */
+        /*flex-grow: 1;*/
+        /*flex: 1;*/
+        /*flex: 0 0 200px;*/
+        flex: 1;
+      }
+
+      .el--1 {
+        align-self: flex-start;
+        /*order: 2;*/
+        /*flex-grow: 2;*/
+      }
+      .el--5 {
+        align-self: stretch;
+        order: 1;
+      }
+      .el--6 {
+        order: -1;
       }
     </style>
   </head>

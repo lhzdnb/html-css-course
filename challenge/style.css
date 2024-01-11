@@ -1,134 +1,263 @@
+/** {*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*body {*/
+/*  font-family: sans-serif;*/
+/*  font-size: 15px;*/
+/*  line-height: 1.4;*/
+/*}*/
+
+/*.container {*/
+/*  border: 4px black solid;*/
+/*  padding: 0;*/
+/*  width: 800px;*/
+/*  height: 370px;*/
+/*  margin: 50px auto;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*}*/
+
+/*main {*/
+/*  display: flex;*/
+/*  gap: 40px;*/
+/*  height: 250px;*/
+/*}*/
+
+/*.shoes-img {*/
+/*  width: 250px;*/
+/*  height: 250px;*/
+/*}*/
+
+/*.product-section {*/
+/*  margin-top: 20px;*/
+/*  flex: 1;*/
+/*}*/
+
+/*.product-title {*/
+/*  font-size: 22px;*/
+/*  text-align: center;*/
+/*  background-color: #f7f7f7;*/
+/*  text-transform: uppercase;*/
+/*  padding: 15px;*/
+/*  position: relative;*/
+/*}*/
+
+/*.price-shipping {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*}*/
+
+/*.price {*/
+/*  font-size: 24px;*/
+/*}*/
+
+/*.shipping {*/
+/*  text-transform: uppercase;*/
+/*  font-size: 12px;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.description {*/
+/*  margin-top: 20px;*/
+/*  font-size: 14px;*/
+/*  margin-bottom: 10px;*/
+/*}*/
+
+/*.more-info:link {*/
+/*  color: black;*/
+/*}*/
+
+/*.color {*/
+/*  margin-top: 30px;*/
+/*  display: flex;*/
+/*  gap: 10px;*/
+/*}*/
+
+/*.color div {*/
+/*  width: 22px;*/
+/*  height: 22px;*/
+/*}*/
+
+/*.black {*/
+/*  background-color: black;*/
+/*}*/
+/*.blue {*/
+/*  background-color: #2f6ee2;*/
+/*}*/
+/*.red {*/
+/*  background-color: #ec2f2f;*/
+/*}*/
+/*.yellow {*/
+/*  background-color: #f0bf1e;*/
+/*}*/
+/*.green {*/
+/*  background-color: #90cc20;*/
+/*}*/
+/*.brown {*/
+/*  background-color: #885214;*/
+/*}*/
+
+/*.details-section {*/
+/*  flex: 1;*/
+/*}*/
+
+/*.details-title {*/
+/*  text-transform: uppercase;*/
+/*  font-size: 16px;*/
+/*  margin-top: 20px;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*.details-list {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  gap: 10px;*/
+/*}*/
+/*.details-list li {*/
+/*  margin-left: 20px;*/
+/*}*/
+
+/*.add-to-cart-btn {*/
+/*  background-color: black;*/
+/*  color: white;*/
+/*  font-size: 18px;*/
+/*  text-transform: uppercase;*/
+/*  flex: 1;*/
+/*  cursor: pointer;*/
+/*  border: none;*/
+/*}*/
+/*.add-to-cart-btn:hover {*/
+/*  background-color: white;*/
+/*  color: black;*/
+/*}*/
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  font-size: 15px;
-  line-height: 1.4;
-}
-
 .container {
-  border: 4px black solid;
-  padding: 0;
+  border: solid 4px black;
+  display: grid;
   width: 800px;
-  height: 370px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
+  margin: 20px auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  grid-column-gap: 40px;
+  position: relative;
 }
 
-main {
-  display: flex;
-  gap: 40px;
-  height: 250px;
+.container::before {
+  content: "SALE";
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 5px 15px;
+  letter-spacing: 2px;
+  position: absolute;
+  top: -15px;
+  left: -30px;
 }
 
-.shoes-img {
-  width: 250px;
-  height: 250px;
-}
-
-.product-section {
-  margin-top: 20px;
-  flex: 1;
+header {
+  text-align: center;
+  grid-column: 1 / -1;
+  background-color: #f7f7f7;
+  /*width: 842px;*/
+  /*height: 60px;*/
+  /*display: grid;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
 }
 
 .product-title {
-  font-size: 22px;
-  text-align: center;
-  background-color: #f7f7f7;
-  text-transform: uppercase;
   padding: 15px;
-  position: relative;
+  text-transform: uppercase;
 }
 
 .price-shipping {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
-
 .price {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .shipping {
-  text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .description {
-  margin-top: 20px;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .more-info:link {
   color: black;
+  font-size: 14px;
 }
 
 .color {
-  margin-top: 30px;
   display: flex;
   gap: 10px;
+  margin-top: 30px;
 }
-
 .color div {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
-
 .black {
   background-color: black;
 }
 .blue {
-  background-color: #2f6ee2;
+  background-color: blue;
 }
 .red {
-  background-color: #ec2f2f;
+  background-color: red;
 }
 .yellow {
-  background-color: #f0bf1e;
+  background-color: yellow;
 }
 .green {
-  background-color: #90cc20;
+  background-color: green;
 }
 .brown {
-  background-color: #885214;
-}
-
-.details-section {
-  flex: 1;
+  background-color: brown;
 }
 
 .details-title {
-  text-transform: uppercase;
-  font-size: 16px;
   margin-top: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
-
 .details-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.details-list li {
   margin-left: 20px;
+  font-size: 14px;
 }
 
 .add-to-cart-btn {
+  grid-column: 1 / -1;
   background-color: black;
   color: white;
-  font-size: 18px;
   text-transform: uppercase;
-  flex: 1;
-  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
+  cursor: pointer;
 }
 .add-to-cart-btn:hover {
   background-color: white;

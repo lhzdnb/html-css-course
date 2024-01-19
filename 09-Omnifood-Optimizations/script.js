@@ -71,7 +71,7 @@ function checkFlexGap() {
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
-checkFlexGap();
+// checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 

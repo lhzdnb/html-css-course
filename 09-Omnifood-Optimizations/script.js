@@ -1,7 +1,26 @@
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
+
+const myName = "lhzdnb";
+
+const h1 = document.querySelector(".heading-primary");
+
+h1.addEventListener("click", () => {
+  h1.textContent = myName;
+  h1.style.backgroundColor = "red";
+  h1.style.padding = "5rem";
+});
+
+const year = document.querySelector(".year");
+const date = new Date();
+year.textContent = date.getFullYear().toString();
+
+document.querySelector(".btn-mobile-nav").addEventListener("click", (e) => {
+  e.target.closest(".header").classList.toggle("nav-open");
+});
+
 function checkFlexGap() {
-  var flex = document.createElement("div");
+  const flex = document.createElement("div");
   flex.style.display = "flex";
   flex.style.flexDirection = "column";
   flex.style.rowGap = "1px";
@@ -10,7 +29,7 @@ function checkFlexGap() {
   flex.appendChild(document.createElement("div"));
 
   document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
+  const isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
   console.log(isSupported);
 

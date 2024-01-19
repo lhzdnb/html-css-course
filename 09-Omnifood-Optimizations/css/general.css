@@ -15,7 +15,6 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragraph default: 1.6
-Large: 1.8
 
 - Letter spacing
 -0.5px
@@ -65,11 +64,11 @@ Medium: 11px
 
 html {
   /* font-size: 10px; */
-
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -77,13 +76,11 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
-
-  /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
 }
 
 /**************************/
-/* GENRAL REUSABLE COMPONENTS */
+/* GENERAL REUSABLE COMPONENTS */
 /**************************/
 
 .container {
@@ -121,9 +118,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* .grid--5-cols {
+.grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
-} */
+}
 
 .grid--center-v {
   align-items: center;

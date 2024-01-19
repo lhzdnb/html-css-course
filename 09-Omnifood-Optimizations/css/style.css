@@ -62,16 +62,13 @@
   border: none;
   background: none;
   cursor: pointer;
-
   display: none;
 }
-
 .icon-mobile-nav {
   height: 4.8rem;
   width: 4.8rem;
-  color: #333;
+  color: #333333;
 }
-
 .icon-mobile-nav[name="close-outline"] {
   display: none;
 }
@@ -427,7 +424,7 @@
   font-weight: 600;
   font-size: 2rem;
   text-transform: uppercase;
-  letter-spacing: 0.75;
+  letter-spacing: 0.75px;
   margin-bottom: 3.2rem;
 }
 
@@ -483,6 +480,22 @@
   line-height: 1.8;
 }
 
+.strikethrough {
+  position: relative;
+}
+
+.strikethrough::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  bottom: 50%;
+  width: 100%; /* 调整这个值来改变横线的长度 */
+  height: 1px; /* 调整这个值来改变横线的宽度 */
+  background: #555555; /* 改变这个值来设置横线的颜色 */
+  display: block;
+}
+
 /**************************/
 /* CTA SECTION */
 /**************************/
@@ -497,7 +510,7 @@
 
 .cta {
   display: grid;
-  /* 2/3 = 66.6% + 1/3 = 33.3% */
+  /* 2 / 3 = 66.67% + 1/3 = 33.3%  */
   grid-template-columns: 2fr 1fr;
   /* background-color: #e67e22; */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);

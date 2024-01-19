@@ -480,6 +480,22 @@
   line-height: 1.8;
 }
 
+.strikethrough {
+  position: relative;
+}
+
+.strikethrough::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  bottom: 50%;
+  width: 100%; /* 调整这个值来改变横线的长度 */
+  height: 1px; /* 调整这个值来改变横线的宽度 */
+  background: #555555; /* 改变这个值来设置横线的颜色 */
+  display: block;
+}
+
 /**************************/
 /* CTA SECTION */
 /**************************/

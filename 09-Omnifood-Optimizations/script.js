@@ -36,6 +36,25 @@ allLinks.forEach((link) =>
   }),
 );
 
+const sectionHero = document.querySelector(".section-hero");
+const observer = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    } else {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  },
+);
+observer.observe(sectionHero);
+
 function checkFlexGap() {
   const flex = document.createElement("div");
   flex.style.display = "flex";

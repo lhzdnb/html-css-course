@@ -19,6 +19,16 @@ document.querySelector(".btn-mobile-nav").addEventListener("click", (e) => {
   e.target.closest(".header").classList.toggle("nav-open");
 });
 
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach((link) =>
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (link.getAttribute("href") === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }),
+);
+
 function checkFlexGap() {
   const flex = document.createElement("div");
   flex.style.display = "flex";

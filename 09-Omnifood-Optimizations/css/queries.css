@@ -18,6 +18,10 @@
     gap: 1.6rem;
     padding: 1.6rem;
   }
+  .testimonials {
+    grid-template-columns: 1fr;
+    row-gap: 9.6rem;
+  }
 }
 
 /**************************/

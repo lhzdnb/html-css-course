@@ -29,6 +29,10 @@ allLinks.forEach((link) =>
     } else if (href !== "#" && href.startsWith("#")) {
       document.querySelector(href).scrollIntoView({ behavior: "smooth" });
     }
+
+    if (link.classList.contains("main-nav-link")) {
+      document.querySelector(".header").classList.toggle("nav-open");
+    }
   }),
 );
 
